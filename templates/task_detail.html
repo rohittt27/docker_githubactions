@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Post</title>
+</head>
+<body>
+    <h1>{{ task.title }}</h1>
+        <p>{{ task.description }}</p>
+        <p>Created at: {{ task.created_at }}</p>
+        <a href="{% url 'task_update' task.pk %}">Edit</a>
+        <a href="{% url 'task_delete' task.pk %}">Delete</a>
+
+</body>
+</html>
