@@ -51,10 +51,10 @@ jobs:
           docker-compose build
 
           # Tag the Docker image
-          docker tag my-django-app:latest ${{ secrets.DOCKER_USERNAME }}/my-django-app:latest
+          docker tag docker_integration:latest ${{ secrets.DOCKER_USERNAME }}/docker_integration:latest
 
           # Push the Docker image
-          docker push ${{ secrets.DOCKER_USERNAME }}/my-django-app:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/docker_integration:latest
 
       - name: Deploy with Docker Compose
         run: |
