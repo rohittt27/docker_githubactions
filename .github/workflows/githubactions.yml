@@ -54,7 +54,7 @@ jobs:
           docker tag docker_integration:latest ${{ secrets.DOCKER_USERNAME }}/docker_integration:latest
 
           # Push the Docker image
-          docker push ${{ secrets.DOCKER_USERNAME }}/docker_integration_web:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/docker_integration:latest
 
       - name: Deploy with Docker Compose
         run: |
