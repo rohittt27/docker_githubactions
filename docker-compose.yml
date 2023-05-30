@@ -9,6 +9,3 @@ services:
       - ./db.sqlite3:/app/db.sqlite3
     ports:
       - 8000:8000
-
-volumes:
-  container_volume:
