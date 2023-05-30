@@ -50,11 +50,8 @@ jobs:
         run: |
           docker-compose build
 
-          # Tag the Docker image
-          docker tag dockergithubactions:latest ${{ secrets.DOCKER_USERNAME }}/dockergithubactions:latest
-
           # Push the Docker image
-          docker push ${{ secrets.DOCKER_USERNAME }}/dockergithubactions:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/dockergithubactions
 
       - name: Deploy with Docker Compose
         run: |
