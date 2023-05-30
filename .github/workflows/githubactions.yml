@@ -51,7 +51,7 @@ jobs:
           docker-compose build
 
           # Push the Docker image
-          docker push ${{ secrets.DOCKER_USERNAME }}/dockergithubactions:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/dockergithubactions
 
       - name: Deploy with Docker Compose
         run: |
